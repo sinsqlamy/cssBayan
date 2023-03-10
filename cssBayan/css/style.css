@@ -6,3 +6,49 @@
 ul {
     list-style-type: none;
 }
+
+li {
+    margin: 10px 0;
+}
+
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.checker {
+    border: 1px solid black;
+    display: block;
+    padding: 1rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+input:checked~.content {
+    height: 30rem;
+}
+
+input:hover~.content {
+    height: 30rem;
+}
+
