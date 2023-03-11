@@ -45,7 +45,6 @@ label {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width: 100%;
     height: 0;
     transition: .8s;
     opacity: 0;
@@ -65,6 +64,13 @@ label {
     h1 {
         font-size: 1.8rem;
     }
+    /* Появление contenta */
+    input:checked~.content,
+    input:hover~.content {
+        opacity: 1;
+        height: 15rem;
+    }
+    
 }
 
 @media (min-width: 820px) {
@@ -74,6 +80,11 @@ label {
 
     h1 {
         font-size: 2.25rem;
+    }
+    input:checked~.content,
+    input:hover~.content {
+        opacity: 1;
+        height: 20rem;
     }
 }
 
@@ -85,18 +96,16 @@ label {
     h1 {
         font-size: 2.75rem;
     }
+    input:checked~.content,
+    input:hover~.content {
+        opacity: 1;
+        height: 20rem;
+    }
 }
 
 @media (hover: none) {
     .bayan-wrapper:hover {
         color: #fff;
-    }
-
-    /* Появление contenta */
-    input:checked~.content
-     {
-        opacity: 1;
-        height: 30vh;
     }
 
     /* animation icon */
@@ -114,14 +123,7 @@ label {
 
     .bayan-wrapper:hover .icon {
         opacity: 1;
-    }
-
-    /* Появление contenta */
-    input:checked~.content,
-    input:hover~.content {
-        opacity: 1;
-        height: 30vw;
-    }
+    } 
 
     /* animation icon */
     input:checked~.checker>.icon,
