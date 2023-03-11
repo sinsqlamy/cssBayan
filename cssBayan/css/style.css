@@ -11,7 +11,7 @@ h1 {
 }
 .bayan-wrapper {
     margin: 0 auto;
-    max-width: 60%;
+    max-width: 80%;
     font-weight: bold;
 }
 
@@ -64,7 +64,7 @@ label {
 /* Появление contenta */
 input:checked~.content, input:hover~.content {
     opacity: 1;
-    height: 30rem; 
+    height: 30vw; 
 }
 
 /* animation icon */
