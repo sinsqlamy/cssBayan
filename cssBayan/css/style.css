@@ -57,15 +57,6 @@ label {
     opacity: 1;
 }
 
-/* active */
-li:active label,
-li:active .content>img {
-    cursor: copy;
-    transition: 1s;
-    color: rgb(123, 0, 255);
-    opacity: .5;
-}
-
 @media (min-width: 320px) {
     body {
         font-size: .8rem;
@@ -102,15 +93,15 @@ li:active .content>img {
     }
 
     /* Появление contenta */
-    input:checked~.content,
-    input:hover~.content {
+    input:checked~.content
+     {
         opacity: 1;
         height: 30vw;
     }
 
     /* animation icon */
-    input:checked~.checker>.icon,
-    input:hover~.checker>.icon {
+    input:checked~.checker>.icon
+     {
         opacity: 1;
         rotate: 135deg;
     }
@@ -120,6 +111,7 @@ li:active .content>img {
     label {
         cursor: pointer;
     }
+
     .bayan-wrapper:hover .icon {
         opacity: 1;
     }
@@ -137,6 +129,15 @@ li:active .content>img {
         rotate: 135deg;
     }
 
+    li:active label,
+    li:active .content>img {
+        cursor: copy;
+        transition: 1s;
+        color: rgb(123, 0, 255);
+        opacity: .5;
+    }
+
+    /* active */
     li:active label,
     li:active .content>img {
         cursor: copy;
