@@ -1,11 +1,20 @@
 @import "reset.css";
 
+body {
+    background: #232733;
+    color: #7CB459;
+}
+
+h1 {
+    padding-top: 80px;
+    font-size: 2rem;
+}
 .bayan-wrapper {
     margin: 0 auto;
-    max-width: 80%;
-    color: brown;
+    max-width: 60%;
     font-weight: bold;
 }
+
 /* Сокрытие элементов */
 .icon {
     display: inline-block;
@@ -16,16 +25,14 @@
 input {
     display: none;
 }
-li {
-    margin: 10px 0;
-}
+
 /* /Сокрытие элементов */
 .bayan-wrapper:hover .icon {
     opacity: 1;
 }
 
 .bayan-wrapper:hover {
-    color: #000;
+    color: #fff;
 }
 
 label {
@@ -44,7 +51,7 @@ label {
     overflow: hidden;
     width: 100%;
     height: 0;
-    transition: .5s;
+    transition: .8s;
     opacity: 0;
 }
 
