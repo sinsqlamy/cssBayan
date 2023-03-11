@@ -9,34 +9,29 @@ h1 {
     padding-top: 80px;
     font-size: 2rem;
 }
+
 .bayan-wrapper {
     margin: 0 auto;
     max-width: 80%;
     font-weight: bold;
 }
 
-/* Сокрытие элементов */
 .icon {
     display: inline-block;
-    width: 1rem; 
+    width: 1rem;
     opacity: 0;
     transition: .5s;
 }
+
 input {
     display: none;
 }
 
-/* /Сокрытие элементов */
-.bayan-wrapper:hover .icon {
-    opacity: 1;
-}
-
-.bayan-wrapper:hover {
-    color: #fff;
+li {
+    border-bottom: 1px solid #fff;
 }
 
 label {
-    cursor: pointer;
     display: flex;
 }
 
@@ -61,21 +56,91 @@ label {
     opacity: 1;
 }
 
-/* Появление contenta */
-input:checked~.content, input:hover~.content {
-    opacity: 1;
-    height: 30vw; 
-}
-
-/* animation icon */
-input:checked~.checker>.icon, input:hover~.checker>.icon {
-    rotate: 135deg;
-}
-
 /* active */
-li:active label, li:active .content>img{
+li:active label,
+li:active .content>img {
     cursor: copy;
     transition: 1s;
-    color: blue;
+    color: rgb(123, 0, 255);
     opacity: .5;
+}
+
+@media (min-width: 320px) {
+    body {
+        font-size: .8rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 820px) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        font-size: 1.75rem;
+    }
+
+    h1 {
+        font-size: 2.75rem;
+    }
+}
+
+@media (hover: none) {
+    .bayan-wrapper:hover {
+        color: #fff;
+    }
+
+    /* Появление contenta */
+    input:checked~.content,
+    input:hover~.content {
+        opacity: 1;
+        height: 30vw;
+    }
+
+    /* animation icon */
+    input:checked~.checker>.icon,
+    input:hover~.checker>.icon {
+        opacity: 1;
+        rotate: 135deg;
+    }
+}
+
+@media (hover: hover) {
+    label {
+        cursor: pointer;
+    }
+    .bayan-wrapper:hover .icon {
+        opacity: 1;
+    }
+
+    /* Появление contenta */
+    input:checked~.content,
+    input:hover~.content {
+        opacity: 1;
+        height: 30vw;
+    }
+
+    /* animation icon */
+    input:checked~.checker>.icon,
+    input:hover~.checker>.icon {
+        rotate: 135deg;
+    }
+
+    li:active label,
+    li:active .content>img {
+        cursor: copy;
+        transition: 1s;
+        color: rgb(123, 0, 255);
+        opacity: .5;
+    }
 }
