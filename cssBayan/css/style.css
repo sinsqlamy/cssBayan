@@ -95,7 +95,7 @@ label {
     input:checked~.content
      {
         opacity: 1;
-        height: 30vmax;
+        height: 30vh;
     }
 
     /* animation icon */
