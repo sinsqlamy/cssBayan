@@ -17,13 +17,6 @@ h1 {
     font-weight: bold;
 }
 
-.icon {
-    display: inline-block;
-    width: 1rem;
-    opacity: 0;
-    transition: .5s;
-}
-
 input {
     display: none;
 }
@@ -36,6 +29,13 @@ label {
     display: flex;
 }
 
+.icon {
+    display: inline-block;
+    width: 1rem;
+    opacity: 0;
+    transition: .5s;
+}
+
 .checker {
     justify-content: space-between;
     padding: 1rem;
@@ -46,8 +46,8 @@ label {
     justify-content: center;
     overflow: hidden;
     height: 0;
-    transition: .8s;
     opacity: 0;
+    transition: .8s;
 }
 
 .content>img {
@@ -55,6 +55,8 @@ label {
     max-height: 100%;
     opacity: 1;
 }
+
+
 
 @media (min-width: 320px) {
     body {
@@ -64,13 +66,6 @@ label {
     h1 {
         font-size: 1.8rem;
     }
-    /* Появление contenta */
-    input:checked~.content,
-    input:hover~.content {
-        opacity: 1;
-        height: 15rem;
-    }
-    
 }
 
 @media (min-width: 820px) {
@@ -80,11 +75,6 @@ label {
 
     h1 {
         font-size: 2.25rem;
-    }
-    input:checked~.content,
-    input:hover~.content {
-        opacity: 1;
-        height: 20rem;
     }
 }
 
@@ -96,11 +86,6 @@ label {
     h1 {
         font-size: 2.75rem;
     }
-    input:checked~.content,
-    input:hover~.content {
-        opacity: 1;
-        height: 20rem;
-    }
 }
 
 @media (hover: none) {
@@ -108,9 +93,14 @@ label {
         color: #fff;
     }
 
+    /* Появление contenta */
+    input:checked~.content {
+        opacity: 1;
+        height: 30vh;
+    }
+
     /* animation icon */
-    input:checked~.checker>.icon
-     {
+    input:checked~.checker>.icon {
         opacity: 1;
         rotate: 135deg;
     }
@@ -123,7 +113,14 @@ label {
 
     .bayan-wrapper:hover .icon {
         opacity: 1;
-    } 
+    }
+    
+    /* Появление contenta */
+    input:checked~.content,
+    input:hover~.content {
+        opacity: 1;
+        height: 30vh;
+    }
 
     /* animation icon */
     input:checked~.checker>.icon,
@@ -131,15 +128,6 @@ label {
         rotate: 135deg;
     }
 
-    li:active label,
-    li:active .content>img {
-        cursor: copy;
-        transition: 1s;
-        color: rgb(123, 0, 255);
-        opacity: .5;
-    }
-
-    /* active */
     li:active label,
     li:active .content>img {
         cursor: copy;
