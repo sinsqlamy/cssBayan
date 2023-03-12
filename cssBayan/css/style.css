@@ -21,6 +21,10 @@ input {
     display: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 li {
     border-bottom: 1px solid #fff;
 }
