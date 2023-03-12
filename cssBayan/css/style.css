@@ -1,0 +1,142 @@
+@import "reset.css";
+
+body {
+    background: #232733;
+    color: #7CB459;
+}
+
+h1 {
+    padding-top: 80px;
+    font-size: 2rem;
+}
+
+.bayan-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80%;
+    font-weight: bold;
+}
+
+input {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    border-bottom: 1px solid #fff;
+}
+
+label {
+    display: flex;
+}
+
+.icon {
+    display: inline-block;
+    width: 1rem;
+    opacity: 0;
+    transition: .5s;
+}
+
+.checker {
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.content {
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: .8s;
+}
+
+.content>img {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1;
+}
+
+
+
+@media (min-width: 320px) {
+    body {
+        font-size: .8rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 820px) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        font-size: 1.75rem;
+    }
+
+    h1 {
+        font-size: 2.75rem;
+    }
+}
+
+@media (hover: none) {
+    .bayan-wrapper:hover {
+        color: #fff;
+    }
+
+    /* Появление contenta */
+    input:checked~.content {
+        opacity: 1;
+        height: 30vh;
+    }
+
+    /* animation icon */
+    input:checked~.checker>.icon {
+        opacity: 1;
+        rotate: 135deg;
+    }
+}
+
+@media (hover: hover) {
+    label {
+        cursor: pointer;
+    }
+
+    .bayan-wrapper:hover .icon {
+        opacity: 1;
+    }
+    
+    /* Появление contenta */
+    input:checked~.content,
+    input:hover~.content {
+        opacity: 1;
+        height: 30vh;
+    }
+
+    /* animation icon */
+    input:checked~.checker>.icon,
+    input:hover~.checker>.icon {
+        rotate: 135deg;
+    }
+
+    li:active label,
+    li:active .content>img {
+        cursor: copy;
+        transition: 1s;
+        color: rgb(123, 0, 255);
+        opacity: .5;
+    }
+}
